@@ -39,8 +39,9 @@ const calculate = (value) => {
 const removeActive = () => controlButtons.forEach(button => button.classList.remove('active'));
 
 controls.addEventListener('click', (e) => {
+  console.log(e.target.innerText);
   const { innerText: btnValue } = e.target;
-  if (!btnValue) return;
+  if (!btnValue) return null;
 
   if (mainOperators.includes(btnValue)) {
     removeActive();
